@@ -14,6 +14,12 @@ defmodule ExCleanPagination.Mixfile do
     ]
   end
 
+ defp description do
+    """
+    API pagination the way RFC7233 intended it
+    """
+  end
+
   def package do
     [
       maintainers: ["Denis Tataurov"],
