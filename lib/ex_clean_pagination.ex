@@ -44,9 +44,9 @@ defmodule ExCleanPagination do
 
   defp handle_validation_result({:error, conn}, _, total, _) do
     conn
+      |> assign(:ex_clean_pagination, %{limit: 0, offset: 0})
       |> put_resp_header("content-range", "*/" <> Integer.to_string(total))
       |> resp(:requested_range_not_satisfiable, "invalid pagination range")
-      |> halt
   end
   defp handle_validation_result({:ok, conn}, {from, to}, total, max_range) do
     available_to = Enum.min([
