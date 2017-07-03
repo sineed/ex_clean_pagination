@@ -42,7 +42,7 @@ defmodule ExCleanPagination.Mixfile do
 
   defp deps do
     [
-      {:plug, "~> 1.2.0"},
+      {:plug, "~> 1.2"},
       {:ex_doc, "~> 0.13", only: :dev}
     ]
   end
